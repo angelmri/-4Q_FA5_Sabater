@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>  
+    while (isNaN(num) || num == "") {
+        var num = prompt("Please input a number: " );
+    }
+
+    var shape = parseInt(num);
+    document.write("Number inputted: " + shape);
+
+        if (shape % 2 == 0){ //even 
+            for (var row = shape; row >= 1; row--){
+                document.write("</br>");
+                for(var column = 0; column < row; column ++){
+                    document.write(row + "");
+                }
+            }
+        }
+
+        else { //odd
+            for (var row = shape; row >= 1; row--){
+                document.write("</br>");
+                for(var column = 0; column < row; column++){
+                    document.write(row);
+                }
+            }
+        }
+
+</script>
+</html>

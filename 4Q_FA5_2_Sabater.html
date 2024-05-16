@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Contact Name List </h3>
+    <input type="text" id = "name">
+    <button onclick="add()">  Add  </button>
+    <button onclick="remove()">  Remove  </button>
+    <p id="output"></p>
+</body>
+<script>
+    var contactArray = [];
+
+    function add() { 
+        var conName = document.getElementById("name");
+        var contact = conName.value;
+        if (contactArray.length>=7){
+            contactArray.shift();
+        }
+        contactArray.push(" " + contact);
+        document.getElementById("output").innerHTML = contactArray;
+    }
+    
+    function remove(){
+        contactArray.pop(   );
+        document.getElementById("output").innerHTML = contactArray;
+    }
+</script>
+</html>
